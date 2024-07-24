@@ -1,0 +1,25 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-jul2424-dev-114411-authRole",
+      "UnauthRoleArn": "arn:aws:iam::711141261525:role/amplify-jul2424-dev-114411-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::711141261525:role/amplify-jul2424-dev-114411-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-jul2424-dev-114411-deployment",
+      "UnauthRoleName": "amplify-jul2424-dev-114411-unauthRole",
+      "StackName": "amplify-jul2424-dev-114411",
+      "StackId": "arn:aws:cloudformation:us-west-2:711141261525:stack/amplify-jul2424-dev-114411/b94326b0-49ec-11ef-8232-06aa208ffc17"
+    },
+    "categories": {
+      "function": {
+        "lambdajul24": {
+          "deploymentBucketName": "amplify-jul2424-dev-114411-deployment",
+          "s3Key": "amplify-builds/lambdajul24-70466669505738362f6e-build.zip"
+        }
+      },
+      "api": {
+        "apijul24": {}
+      }
+    }
+  }
+}

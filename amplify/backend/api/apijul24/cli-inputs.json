@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/picture/{pictureId}": {
+      "name": "/picture/{pictureId}",
+      "lambdaFunction": "lambdajul24",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
