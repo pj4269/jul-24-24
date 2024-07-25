@@ -1,5 +1,5 @@
 import json
-
+'''
 def handler(event, context):
   print('received event:')
   print(event)
@@ -14,7 +14,7 @@ def handler(event, context):
       'body': json.dumps('Hello Python lambda - Jul 24, 24!')
   }
   
-  
+'''  
      
    
 def handler(event, context):
