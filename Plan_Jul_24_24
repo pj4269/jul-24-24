@@ -1,0 +1,169 @@
+
+- US-West-1 North California
+
+1.   Create NPX: 
+
+      npx create-react-app jul-24-24    
+      cd jul-24-24 
+      npm start                                                                        
+   
+2.   Push to Github       
+			
+		#echo "# jul-24-24" >> README.md
+		 
+		  git init
+			git add *
+			git commit -m "first commit"
+			git branch -M main
+			git remote add origin https://github.com/pj4269/jul-24-24.git
+			git push -u origin main
+			
+3.  Create Amplify and Github repo manually
+
+4.  amplify init 
+
+
+5.  amplify add api  : apijul24
+                       /picture/{pictureId}
+
+
+                       lambda name      : lambdajul24
+                       
+                       python : changed from Pythpon 3.8 to Python 3.10 :  
+     
+                                                            update a] Pipfile
+                                                                    b] ../amplify/backend/function/amplifyjun05/amplifyjun05-cloudformation-template.json                       
+    
+6. amplify push 
+7. github push
+
+		  git init
+			git add *
+			git commit -m "2nd commit"
+			git branch -M main
+			git push -u origin main
+			
+			
+			
+8. Gateway :  How do you see your newly created API on Gateway?			: Gateway creation takes about 5-10 min -> so wait  -> It' created
+			
+           : https://afyc26k03l.execute-api.us-west-2.amazonaws.com			      
+
+9. What' next ? 
+
+  a) Change lambda code 
+  b) How do you test?
+
+
+
+
+
+   
+   
+def handler(event, context):
+  print('received event: ', event)
+  get_raw_path    = "/NewGetP"
+  create_raw_path = "/postP"
+  
+  time = "11:53"
+  message = {"f_name":"AAAAAAA", "l_name":"BBBBBBBBBB"}
+  
+  if event['path'] == get_raw_path:
+    # call database
+    pid = event['queryStringParameters']['p_id']
+    print ("Using GEEEEEEEETTTTT")
+    print ("received number: ", pid, type(pid), int(pid)+5)
+    print ('Hello from your new Amplify Python lambda GET !' + time)
+    #return { "aaaaaaaaaaaaaaaaa": "bbbbbbbbb"  }
+    #message = {"f_name":"AAAAAAA", "l_name":"BBBBBBBBBB"}
+    # not worked:
+    #return {"f_name":"AAAAAAA", "l_name":"BBBBBBBBBB"} 
+    # worked
+    return {
+      'statusCode': 200,
+      'headers': {
+          'Access-Control-Allow-Headers': '*',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET' }, 'body': json.dumps( message )#'Hello from your new Amplify Python lambda GET !' + time)
+          }
+    
+          
+          
+  elif  event['path'] == create_raw_path:
+    print ("Using POSSSSSSSSSST")
+    
+    body = json.loads(event['body'])
+    f_name = body['f_name']
+    l_name = body['l_name']
+    print ("received names:  ",  f_name, l_name)
+    print ('Hello from your new Amplify Python lambda- POST!'  + time)
+    # return {"f_name_received": f_name}
+    #worked
+    return {
+      'statusCode': 200,
+      'headers': {
+          'Access-Control-Allow-Headers': '*',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'POST' }, 'body': json.dumps(message)
+          }
+    
+          
+  else:
+    return {
+      'statusCode': 200,
+      'headers': {
+          'Access-Control-Allow-Headers': '*',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'  },  'body': json.dumps('Hello from your new Amplify Python lambda-ANY '  + time) }
+          
+          
+          
+
+10. How to test it ? - Here Jul 25, 24
+
+ a) npm install react-webcam
+    
+    npm install aws-amplify
+
+ b) Copy, paste : 'Components' and App.js from "Jun-27-24"
+
+ c) amplify push
+ 
+ d) 
+ 		  git init
+			git add *
+			git commit -m "App.js copied and pasted"
+			git branch -M main
+			git push -u origin main
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
