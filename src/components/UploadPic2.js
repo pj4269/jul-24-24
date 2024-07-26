@@ -21,8 +21,8 @@ const UploadPicture2 = () => {
     const requestOptions = { method: "POST",
                              body: formData,  };
     try {
-      const response = await fetch("https://g9qdesewp6.execute-api.us-west-2.amazonaws.com/dev/uploadfile/", requestOptions);  
-      const response2 = await fetch('https://g9qdesewp6.execute-api.us-west-2.amazonaws.com/dev/uploadfile/');  // Replace with your endpoint      
+      const response = await fetch("https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev/picture/", requestOptions);  
+      const response2 = await fetch("https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev/picture/");  // Replace with your endpoint      
       const blob = await response2.blob();
       const url = URL.createObjectURL(blob);
       console.log(response2)

@@ -10,7 +10,7 @@ const PhotoDisplay = () => {
 
     const fetchPhoto = async () => {
         try {
-            const response = await fetch("https://g9qdesewp6.execute-api.us-west-2.amazonaws.com/dev/uploadfile/");
+            const response = await fetch("https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev/picture/");
             const blob = await response.blob();
             const url = URL.createObjectURL(blob);
             setPhotoUrl(url);

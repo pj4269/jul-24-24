@@ -75,8 +75,8 @@ function Photo_capture_from_scratch() {
   };
 
   try {
-    // sending data to Lambda
-    const response = await fetch("https://g9qdesewp6.execute-api.us-west-2.amazonaws.com/dev/uploadfile/", requestOptions);    
+    // sending data to Lambda     
+    const response = await fetch("https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev/picture/", requestOptions);    
     const responseData = await response.json(); // if you expect a JSON response
     console.log( "MyWebCam2  worked just fine!  10:47 am   -   Jun 29, 24")    
     

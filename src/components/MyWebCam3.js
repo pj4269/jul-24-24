@@ -58,7 +58,7 @@ const handleSubmit = async (capturedFile) => {
     let response;
 
     do {
-      response = await fetch("https://g9qdesewp6.execute-api.us-west-2.amazonaws.com/dev/uploadfile/", requestOptions);
+      response = await fetch("https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev/picture/", requestOptions);
       attempts--;
     } while (!response.ok && attempts > 0);
 
