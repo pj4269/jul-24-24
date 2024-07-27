@@ -19,7 +19,7 @@ def handler(event, context):
    
 def handler(event, context):
   print('received event: ', event)
-  get_raw_path    = "/NewGetP"
+  get_raw_path    = "/picture"
   create_raw_path = "/postP"
   
   time = "Jul 27: 11 am"
@@ -41,7 +41,7 @@ def handler(event, context):
       'headers': {
           'Access-Control-Allow-Headers': '*',
           'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'GET' }, 'body': json.dumps( message )#'Hello from your new Amplify Python lambda GET !' + time)
+          'Access-Control-Allow-Methods': 'OPTIONS,POST,GET' }, 'body': json.dumps( message )#'Hello from your new Amplify Python lambda GET !' + time)
           }
     
           

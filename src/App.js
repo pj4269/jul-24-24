@@ -9,7 +9,7 @@ import UploadPicture from './components/UploadPic'
 import UploadPicture2 from './components/UploadPic2'
 import PhotoDisplay from './components/PhotoFromLambda'
 
-import Photo_capture_from_scratch2 from  './components/MyWebCam3';
+//import Photo_capture_from_scratch2 from  './components/MyWebCam3';
 
 
 
@@ -57,8 +57,8 @@ const App = () => {
     <div className="App">
 
     
-      <h2> Jul 2, 24: </h2>    
-      <Photo_capture_from_scratch2/>
+      <h2> Jul 2, 24: Photo_capture_from_scratch2 - commented out </h2>    
+      
       
             
       <h2> Jul 1, 24: </h2>    
