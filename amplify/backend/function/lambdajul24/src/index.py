@@ -19,7 +19,7 @@ def handler(event, context):
    
 def handler(event, context):
   print('received event: ', event)
-  get_raw_path    = "/picture"
+  get_raw_path    = "/picture/*"
   create_raw_path = "/postP"
   
   time = "Jul 27: 11 am"
