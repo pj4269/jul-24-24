@@ -79,10 +79,10 @@ function Photo_capture_from_scratch() {
     // Jul 30th, 24
     
     const data = "3";
-
+    /*
     const sendData = async () => {
       try {
-        const response = await fetch("https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev/picture/", {
+        const response = await fetch("https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev/picture/123", {
         method: "POST", // or "PUT" depending on your backend requirements
         headers: {
         "Content-Type": "application/json"
@@ -90,14 +90,28 @@ function Photo_capture_from_scratch() {
        body: JSON.stringify({ data }) // convert the data to a JSON string
         });
 
-					const result = await response.json();
-					console.log(result);
-				} catch (error) {
-					console.error("Error sending data:", error);
-				}
-			};
+    */
+    
+   
 
-			sendData();  
+const sendData = async () => {
+  try {
+    const response = await fetch(`https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev/picture/${data}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+
+    const result = await response.json();
+    console.log(result);
+  } catch (error) {
+    console.error("Error sending data:", error);
+  }
+};
+
+sendData();
+    
     
     //
     /*
