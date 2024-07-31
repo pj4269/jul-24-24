@@ -66,11 +66,22 @@ def handler(event, context):
     
           
   else:
-    print ('Hello from your new Amplify Python lambda- POST!'  + time)  
+
+    # Extract the pictureId from the path parameters
+    picture_id = event['pathParameters']['pictureId']
+    
+    # Convert the picture_id to an integer
+    picture_id_int = int(picture_id)
+    
+    # Add 100 to the integer
+    result = picture_id_int + 100
+    
+  
+    print ('Hi from your new Amplify Python lambda: '  + result)  
     
     return {
       'statusCode': 200,
       'headers': {
           'Access-Control-Allow-Headers': '*',
           'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'  },  'body': json.dumps('Hello from your new Amplify Python lambda-Jul 30, 24 - 3 pm'  + time) }
+          'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'  },  'body': json.dumps('Hello from your new Amplify Python lambda-Jul 31, 24 - 3 pm'  + result) }

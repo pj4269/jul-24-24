@@ -104,7 +104,7 @@ const sendData = async () => {
     });
 
     const result = await response.json();
-    console.log(result);
+    console.log("Jul 31, 24: ", result);
   } catch (error) {
     console.error("Error sending data:", error);
   }
