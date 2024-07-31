@@ -47,25 +47,6 @@ def handler(event, context):
     
           
           
-  else:#  event['path'] == create_raw_path:
-    print ("Using POSSSSSSSSSST")
-    
-    body = json.loads(event['body'])
-    f_name = body['f_name']
-    l_name = body['l_name']
-    print ("received names:  ",  f_name, l_name)
-    print ('Hello from your new Amplify Python lambda- POST!'  + time)
-    # return {"f_name_received": f_name}
-    #worked
-    return {
-      'statusCode': 200,
-      'headers': {
-          'Access-Control-Allow-Headers': '*',
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'POST' }, 'body': json.dumps(message)
-          }
-    
-          
   if event['resource'] == target_resource::
 
     # Extract the pictureId from the path parameters
@@ -86,3 +67,24 @@ def handler(event, context):
           'Access-Control-Allow-Headers': '*',
           'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'  },  'body': json.dumps('Hello from your new Amplify Python lambda-Jul 31, 24 - 3:00 pm: '  + result) }
+  else: 
+    print ("Using POSSSSSSSSSST")
+    
+    body = json.loads(event['body'])
+    f_name = body['f_name']
+    l_name = body['l_name']
+    print ("received names:  ",  f_name, l_name)
+    print ('Hello from your new Amplify Python lambda- POST!'  + time)
+    # return {"f_name_received": f_name}
+    #worked
+    return {
+      'statusCode': 200,
+      'headers': {
+          'Access-Control-Allow-Headers': '*',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'POST' }, 'body': json.dumps(message)
+          }
+    
+          
+
+          

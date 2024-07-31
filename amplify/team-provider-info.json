@@ -14,7 +14,7 @@
       "function": {
         "lambdajul24": {
           "deploymentBucketName": "amplify-jul2424-dev-114411-deployment",
-          "s3Key": "amplify-builds/lambdajul24-516f57617a384830414c-build.zip"
+          "s3Key": "amplify-builds/lambdajul24-5636556f563544475071-build.zip"
         }
       },
       "api": {
