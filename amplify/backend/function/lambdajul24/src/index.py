@@ -19,8 +19,9 @@ def handler(event, context):
    
 def handler(event, context):
   print('received event: ', event)
-  get_raw_path    = "/picture/*"
+  get_raw_path    = ""
   create_raw_path = "/postP"
+  target_resource = '/picture/{pictureId}'
   
   time = "Jul 30: 11 am"
   message = {"f_name":"AAAAAAA", "l_name":"BBBBBBBBBB"}
@@ -46,7 +47,7 @@ def handler(event, context):
     
           
           
-  elif  event['path'] == create_raw_path:
+  else:#  event['path'] == create_raw_path:
     print ("Using POSSSSSSSSSST")
     
     body = json.loads(event['body'])
@@ -65,7 +66,7 @@ def handler(event, context):
           }
     
           
-  else:
+  if event['resource'] == target_resource::
 
     # Extract the pictureId from the path parameters
     picture_id = event['pathParameters']['pictureId']
@@ -77,11 +78,11 @@ def handler(event, context):
     result = str(picture_id_int + 100 )
     
   
-    print ('Hi from your new Amplify Python lambda: '  + result)  
+    print ('Hi from your new Amplify Python lambda: Jul 31: 3:35 pm '  + result)  
     
     return {
       'statusCode': 200,
       'headers': {
           'Access-Control-Allow-Headers': '*',
           'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'  },  'body': json.dumps('Hello from your new Amplify Python lambda-Jul 31, 24 - 3 pm'  + result) }
+          'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'  },  'body': json.dumps('Hello from your new Amplify Python lambda-Jul 31, 24 - 3:00 pm: '  + result) }
