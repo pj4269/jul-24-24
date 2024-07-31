@@ -74,7 +74,7 @@ def handler(event, context):
     picture_id_int = int(picture_id)
     
     # Add 100 to the integer
-    result = picture_id_int + 100
+    result = str(picture_id_int + 100 )
     
   
     print ('Hi from your new Amplify Python lambda: '  + result)  
