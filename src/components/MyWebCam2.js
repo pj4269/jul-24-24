@@ -76,10 +76,35 @@ function Photo_capture_from_scratch() {
 
   try {
     // sending data to Lambda     
-    const response = await fetch("https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev/picture/AAAAAAABBBBBBBCCCCC")//, requestOptions);    
+    // Jul 30th, 24
+    
+    const data = "3";
+
+    const sendData = async () => {
+      try {
+        const response = await fetch("https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev/picture/", {
+        method: "POST", // or "PUT" depending on your backend requirements
+        headers: {
+        "Content-Type": "application/json"
+        },
+       body: JSON.stringify({ data }) // convert the data to a JSON string
+        });
+
+					const result = await response.json();
+					console.log(result);
+				} catch (error) {
+					console.error("Error sending data:", error);
+				}
+			};
+
+			sendData();  
+    
+    //
+    /*
+    const response = await fetch("https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev/picture/" )//, requestOptions);    
     const responseData = await response.json(); // if you expect a JSON response
     console.log( "MyWebCam2  worked just fine!  10:47 am   -   Jun 29, 24")    
-    
+    */
     // New: Jun 29, 24 : Receiving Photo from Lambda
     setUploadSuccess(true);
     const imageSrc = await fetchPhotoFromLambda();

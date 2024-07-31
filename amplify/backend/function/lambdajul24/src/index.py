@@ -22,7 +22,7 @@ def handler(event, context):
   get_raw_path    = "/picture/*"
   create_raw_path = "/postP"
   
-  time = "Jul 27: 11 am"
+  time = "Jul 30: 11 am"
   message = {"f_name":"AAAAAAA", "l_name":"BBBBBBBBBB"}
   
   if event['path'] == get_raw_path:
@@ -73,4 +73,4 @@ def handler(event, context):
       'headers': {
           'Access-Control-Allow-Headers': '*',
           'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'  },  'body': json.dumps('Hello from your new Amplify Python lambda-Jul 25, 24 - 6 pm'  + time) }
+          'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'  },  'body': json.dumps('Hello from your new Amplify Python lambda-Jul 30, 24 - 3 pm'  + time) }
