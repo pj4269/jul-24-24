@@ -47,7 +47,7 @@ def handler(event, context):
    ''' 
           
           
-  if event['resource'] == target_resource::
+  if event['path'] == target_resource::
 
     # Extract the pictureId from the path parameters
     picture_id = event['pathParameters']['pictureId']
