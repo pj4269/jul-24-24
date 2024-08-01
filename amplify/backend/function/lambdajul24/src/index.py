@@ -19,9 +19,9 @@ def handler(event, context):
    
 def handler(event, context):
   print('received event: ', event)
-  get_raw_path    = ""
-  create_raw_path = "/postP"
-  target_resource = "/picture/{pictureId}"
+  get_raw_path    = ''
+  create_raw_path = '/postP'
+  target_resource = '/picture/{pictureId}'
   
   time = "Aug 01: 3 pm"
   message = {"f_name":"AAAAAAA", "l_name":"BBBBBBBBBB"}
@@ -48,7 +48,7 @@ def handler(event, context):
    ''' 
           
           
-  if event['path'] == target_resource:
+  if event['resource'] == target_resource:
 
     # Extract the pictureId from the path parameters
     picture_id = event['pathParameters']['pictureId']
