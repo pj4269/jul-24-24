@@ -73,12 +73,38 @@ function Photo_capture_from_scratch() {
     method: "POST",
     body: formData2,
   };
+  
+  // Aug 01, 24: sending a photo
+  const formData = new FormData();
+  const timestamp = Date.now();
+  formData.append("file", capturedFile, `${timestamp}_${capturedFile.name}`);
+  try {
+    const response = await fetch('https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev/picture', {
+      method: 'POST',
+      body: formData,
+      // Don't set Content-Type header, let the browser set it with the correct boundary for FormData
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const result = await response.json();
+    console.log("Response from server:", result);    
+    setIsUploading(false);
+      } 
+    catch (error) {
+    console.error("Error sending data:", error);
+    setIsUploading(false);
+    // Handle error here (e.g., show error message to user)
+                 }
+    
+
+  // Jul 31, 24: Sending a test number - works
 
   try {
     // sending data to Lambda     
-    // Jul 30th, 24
-    
-    const data = "3";
+
     /*
     const sendData = async () => {
       try {
@@ -92,26 +118,28 @@ function Photo_capture_from_scratch() {
 
     */
     
-   
-
-const sendData = async () => {
-  try {
-    const response = await fetch(`https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev/picture/${data}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json"
-      }
-    });
+    // Jul 30th, 24 - sending and adding a test number = 3 and returns 103
     
-    //        const result = await response.json();
+    const data = "3";   
+
+    const sendData = async () => {
+      try {
+        const response = await fetch(`https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev/picture/${data}`, {
+        method: "GET",
+        headers: {
+        "Content-Type": "application/json"
+          }
+        });
+    
+      //        const result = await response.json();
 
 
-    const result = await response.json();
-    console.log("Jul 31, 24: ", result);
-  } catch (error) {
-    console.error("Error sending data:", error);
-  }
-};
+      const result = await response.json();
+      console.log("Jul 31, 24: ", result);
+        } catch (error) {
+        console.error("Error sending data:", error);
+                        }
+                                 };
 
 sendData();
     
