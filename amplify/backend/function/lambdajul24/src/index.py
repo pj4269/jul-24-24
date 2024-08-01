@@ -21,7 +21,7 @@ def handler(event, context):
   print('received event: ', event)
   get_raw_path    = ""
   create_raw_path = "/postP"
-  target_resource = '/picture/{pictureId}'
+  target_resource = '/picture'#/{pictureId}'
   
   time = "Jul 30: 11 am"
   message = {"f_name":"AAAAAAA", "l_name":"BBBBBBBBBB"}
