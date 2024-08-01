@@ -21,10 +21,11 @@ def handler(event, context):
   print('received event: ', event)
   get_raw_path    = ""
   create_raw_path = "/postP"
-  target_resource = '/picture'#/{pictureId}'
+  target_resource = "/picture/{pictureId}"
   
-  time = "Jul 30: 11 am"
+  time = "Aug 01: 3 pm"
   message = {"f_name":"AAAAAAA", "l_name":"BBBBBBBBBB"}
+  print (event)
   '''
   if event['path'] == get_raw_path:
     # call database
@@ -47,7 +48,7 @@ def handler(event, context):
    ''' 
           
           
-  if event['path'] == target_resource::
+  if event['path'] == target_resource:
 
     # Extract the pictureId from the path parameters
     picture_id = event['pathParameters']['pictureId']
@@ -66,7 +67,7 @@ def handler(event, context):
       'headers': {
           'Access-Control-Allow-Headers': '*',
           'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'  },  'body': json.dumps('Hello from your new Amplify Python lambda-Jul 31, 24 - 3:00 pm: '  + result) }
+          'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'  },  'body': json.dumps('Hello from your new Amplify Python lambda- Aug 1, 24 - 3:00 pm: '  + result) }
   else: 
     print ("Using POSSSSSSSSSST")
     
