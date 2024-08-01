@@ -25,7 +25,7 @@ def handler(event, context):
   
   time = "Jul 30: 11 am"
   message = {"f_name":"AAAAAAA", "l_name":"BBBBBBBBBB"}
-  
+  '''
   if event['path'] == get_raw_path:
     # call database
     pid = event['queryStringParameters']['p_id']
@@ -44,7 +44,7 @@ def handler(event, context):
           'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Methods': 'OPTIONS,POST,GET' }, 'body': json.dumps( message )#'Hello from your new Amplify Python lambda GET !' + time)
           }
-    
+   ''' 
           
           
   if event['resource'] == target_resource::
@@ -59,7 +59,7 @@ def handler(event, context):
     result = str(picture_id_int + 100 )
     
   
-    print ('Hi from your new Amplify Python lambda: Jul 31: 3:35 pm '  + result)  
+    print ('Hi from your new Amplify Python lambda: Aug 01: 3:05 pm '  + result)  
     
     return {
       'statusCode': 200,
@@ -71,10 +71,10 @@ def handler(event, context):
     print ("Using POSSSSSSSSSST")
     
     body = json.loads(event['body'])
-    f_name = body['f_name']
-    l_name = body['l_name']
+    f_name = "George"#body['f_name']
+    l_name = "Posttter"#body['l_name']
     print ("received names:  ",  f_name, l_name)
-    print ('Hello from your new Amplify Python lambda- POST!'  + time)
+    print ('Hello from your new Amplify Python lambda- POST!'  + f_name + l_name)
     # return {"f_name_received": f_name}
     #worked
     return {
@@ -82,7 +82,7 @@ def handler(event, context):
       'headers': {
           'Access-Control-Allow-Headers': '*',
           'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'POST' }, 'body': json.dumps(message)
+          'Access-Control-Allow-Methods': 'OPTIONS,POST,GET' }, 'body': json.dumps(message)
           }
     
           

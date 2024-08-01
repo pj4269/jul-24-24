@@ -102,6 +102,9 @@ const sendData = async () => {
         "Content-Type": "application/json"
       }
     });
+    
+    //        const result = await response.json();
+
 
     const result = await response.json();
     console.log("Jul 31, 24: ", result);

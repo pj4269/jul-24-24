@@ -151,7 +151,11 @@ def handler(event, context):
 
 
 
-
+11. Go to API Gateway in AWS Console.
+    Select your API.
+    Go to the Resources section.
+    Select the resource and method (e.g., /picture/{pictureId} GET).
+    Click on "Enable CORS".
 
 
 
