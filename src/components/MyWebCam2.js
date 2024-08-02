@@ -77,7 +77,7 @@ function Photo_capture_from_scratch() {
   // Aug 02, 24: sending a photo
   
   try {
-    const response = await fetch('https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev/picture/', {
+    const response = await fetch('https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev/picture', {
       method: 'POST',
       body: formData2,
       // Don't set Content-Type header, let the browser set it with the correct boundary for FormData
