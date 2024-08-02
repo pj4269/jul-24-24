@@ -23,7 +23,7 @@ def handler(event, context):
   create_raw_path = '/postP'
   target_resource = '/picture/{pictureId}'
   
-  time = "Aug 01: 3 pm"
+  time = "Aug 02: 12 pm"
   message = {"f_name":"AAAAAAA", "l_name":"BBBBBBBBBB"}
   print (event)
   '''
@@ -60,7 +60,7 @@ def handler(event, context):
     result = str(picture_id_int + 100 )
     
   
-    print ('Hi from your new Amplify Python lambda: Aug 01: 3:05 pm '  + result)  
+    print ('Hi from your new Amplify Python lambda: ' + time + "-"  + result)  
     
     return {
       'statusCode': 200,
