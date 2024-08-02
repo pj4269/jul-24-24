@@ -75,13 +75,11 @@ function Photo_capture_from_scratch() {
   };
   
   // Aug 01, 24: sending a photo
-  const formData = new FormData();
-  const timestamp = Date.now();
-  formData.append("file", capturedFile, `${timestamp}_${capturedFile.name}`);
+  
   try {
     const response = await fetch('https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev/picture', {
       method: 'POST',
-      body: formData,
+      body: formData2,
       // Don't set Content-Type header, let the browser set it with the correct boundary for FormData
     });
 
