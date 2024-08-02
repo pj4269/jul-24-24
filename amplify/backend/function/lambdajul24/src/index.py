@@ -67,6 +67,9 @@ def handler(event, context):
       'headers': {
           'Access-Control-Allow-Headers': '*',
           'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+
+
           'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'  },  'body': json.dumps('Hello from your new Amplify Python lambda- Aug 1, 24 - 3:00 pm: '  + result) }
   else: 
     print ("Using POSSSSSSSSSST")
