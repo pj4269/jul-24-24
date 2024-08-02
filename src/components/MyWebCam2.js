@@ -74,10 +74,10 @@ function Photo_capture_from_scratch() {
     body: formData2,
   };
   
-  // Aug 01, 24: sending a photo
+  // Aug 02, 24: sending a photo
   
   try {
-    const response = await fetch('https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev/picture', {
+    const response = await fetch('https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev/picture/', {
       method: 'POST',
       body: formData2,
       // Don't set Content-Type header, let the browser set it with the correct boundary for FormData
@@ -102,19 +102,6 @@ function Photo_capture_from_scratch() {
 
   try {
     // sending data to Lambda     
-
-    /*
-    const sendData = async () => {
-      try {
-        const response = await fetch("https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev/picture/123", {
-        method: "POST", // or "PUT" depending on your backend requirements
-        headers: {
-        "Content-Type": "application/json"
-        },
-       body: JSON.stringify({ data }) // convert the data to a JSON string
-        });
-
-    */
     
     // Jul 30th, 24 - sending and adding a test number = 3 and returns 103
     
@@ -138,8 +125,8 @@ function Photo_capture_from_scratch() {
         console.error("Error sending data:", error);
                         }
                                  };
-
-sendData();
+    // Aug 02 - commented out: works 
+    //sendData();
     
     
     //
