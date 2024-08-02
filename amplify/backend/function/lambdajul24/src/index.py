@@ -23,7 +23,7 @@ def handler(event, context):
   create_raw_path = '/postP'
   target_resource = '/picture/{pictureId}'
   
-  time = "Aug 02: 12 pm"
+  time = "Aug 02: 3 pm"
   message = {"f_name":"AAAAAAA", "l_name":"BBBBBBBBBB"}
   print (event)
   '''
@@ -70,7 +70,7 @@ def handler(event, context):
           'Access-Control-Allow-Headers': 'Content-Type, Authorization',
 
 
-          'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'  },  'body': json.dumps('Hello from your new Amplify Python lambda- Aug 1, 24 - 3:00 pm: '  + result) }
+          'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'  },  'body': json.dumps('Hello from your new Amplify Python lambda- Aug 2, 24 - 2:50 pm: '  + result) }
   else: 
     print ("Using POSSSSSSSSSST")
     

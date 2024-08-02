@@ -143,8 +143,9 @@ function Photo_capture_from_scratch() {
     */
     // New: Jun 29, 24 : Receiving Photo from Lambda
     setUploadSuccess(true);
-    const imageSrc = await fetchPhotoFromLambda();
-    console.log("Received Data from Lambda", imageSrc);
+    // Aug 02: commented out
+    //const imageSrc = await fetchPhotoFromLambda();
+    //console.log("Received Data from Lambda", imageSrc);
     setPhotoSrc(imageSrc); // Update state with the fetched photo   
     
     
