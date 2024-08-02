@@ -83,7 +83,7 @@ function Photo_capture_from_scratch() {
       method: 'POST',
       body: formData2,
       headers: {
-      //"Content-Type": "application/json",
+      "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*"
       }
       // Don't set Content-Type header, let the browser set it with the correct boundary for FormData
