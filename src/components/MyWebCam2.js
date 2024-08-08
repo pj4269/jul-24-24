@@ -115,7 +115,9 @@ function Photo_capture_from_scratch() {
 
     const sendData = async () => {
       try {
-        const response = await fetch(`https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev/picture/${data}`, {
+        //const response = await fetch(`https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev/picture/${data}`, 
+        const response = await fetch(`https://oyuk0ud93a.execute-api.us-west-1.amazonaws.com/${data}`, 
+        {
         method: "GET",
         headers: {
         "Content-Type": "application/json"
@@ -126,7 +128,7 @@ function Photo_capture_from_scratch() {
 
 
       const result = await response.json();
-      console.log("Jul 31, 24: ", result);
+      console.log("Aug 08, 24: ", result);
         } catch (error) {
         console.error("Error sending data:", error);
                         }
@@ -208,7 +210,9 @@ const handleCanPlayThrough = () => {
 
     const fetchPhotoFromLambda = async () => {
         try {
-            const response = await fetch("https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev/picture/");
+            //const response = await fetch("https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev/picture/");
+            const response = await fetch("https://oyuk0ud93a.execute-api.us-west-1.amazonaws.com/");
+            
             if (!response.ok) {
                 throw new Error('Not getting anything from the backend!');
             }

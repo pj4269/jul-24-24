@@ -13,12 +13,12 @@ import PhotoDisplay from './components/PhotoFromLambda'
 
 
 
-const myAPI = "apijul24"    //  "https://c7hgw5za5e.execute-api.us-west-2.amazonaws.com/dev"//"June07AmplifyLambda2"
-
-//const path = "/customers"; 
-const path = "/picture"; 
-
-
+//const myAPI = "apijul24"    //  "https://c7hgw5za5e.execute-api.us-west-2.amazonaws.com/dev"//"June07AmplifyLambda2"
+const myAPI = "aug_08_24" // aug_08_24/test
+ 
+//const path = "/picture"; 
+const path = "/test"
+/*
 const awsmobile = {
     "aws_project_region": "us-west-2",
     "aws_cloud_logic_custom": [
@@ -28,8 +28,17 @@ const awsmobile = {
             "region": "us-west-2"
         }
     ]
-};
-
+}; */
+const awsmobile = {
+    "aws_project_region": "us-west-1",
+    "aws_cloud_logic_custom": [
+        {
+            "name": "aug_08_24",
+            "endpoint": "https://oyuk0ud93a.execute-api.us-west-1.amazonaws.com",
+            "region": "us-west-1"
+        }
+    ]
+}; 
 
 
 
