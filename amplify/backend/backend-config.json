@@ -1,5 +1,19 @@
 {
   "api": {
+    "apiAugTest1": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "LambdaAug09"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
     "apijul24": {
       "dependsOn": [
         {
@@ -16,6 +30,11 @@
     }
   },
   "function": {
+    "LambdaAug09": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "lambdajul24": {
       "build": true,
       "providerPlugin": "awscloudformation",
@@ -23,6 +42,22 @@
     }
   },
   "parameters": {
+    "AMPLIFY_function_LambdaAug09_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "LambdaAug09"
+        }
+      ]
+    },
+    "AMPLIFY_function_LambdaAug09_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "LambdaAug09"
+        }
+      ]
+    },
     "AMPLIFY_function_lambdajul24_deploymentBucketName": {
       "usedBy": [
         {

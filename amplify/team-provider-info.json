@@ -15,10 +15,15 @@
         "lambdajul24": {
           "deploymentBucketName": "amplify-jul2424-dev-114411-deployment",
           "s3Key": "amplify-builds/lambdajul24-52577971614534643546-build.zip"
+        },
+        "LambdaAug09": {
+          "deploymentBucketName": "amplify-jul2424-dev-114411-deployment",
+          "s3Key": "amplify-builds/LambdaAug09-724e3248657278636c4a-build.zip"
         }
       },
       "api": {
-        "apijul24": {}
+        "apijul24": {},
+        "apiAugTest1": {}
       }
     }
   }
